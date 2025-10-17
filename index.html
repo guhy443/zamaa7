@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zama Quiz 54–63</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: "Poppins", sans-serif;
+      text-align: center;
+      color: white;
+    }
+    .page {
+      display: none;
+      height: 100vh;
+      padding: 20px;
+    }
+    h1, h2, p {
+      margin-bottom: 20px;
+    }
+    button {
+      display: block;
+      margin: 10px auto;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 8px;
+      background: rgba(0, 0, 0, 0.3);
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background: rgba(0, 0, 0, 0.5);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Intro Page -->
+  <div class="page" id="intro" style="display:block; background: linear-gradient(to right, #ff9966, #ff5e62);">
+    <h1>Welcome to Zama Quiz 54–63 🎯</h1>
+    <p>Test your knowledge of FHE, AI privacy, and confidential blockchain!</p>
+    <button onclick="startQuiz()">Start Quiz 🚀</button>
+  </div>
+
+  <!-- Quiz Pages -->
+  <div class="page" id="q1" style="background: linear-gradient(to right, #43e97b, #38f9d7);">
+    <h2>Question 1</h2>
+    <p>What does FHE allow developers to do?</p>
+    <button onclick="checkAnswer(1,true)">Compute on encrypted data without decrypting</button>
+    <button onclick="checkAnswer(1,false)">Hide blockchain code</button>
+    <button onclick="checkAnswer(1,false)">Encrypt passwords only</button>
+    <button onclick="checkAnswer(1,false)">Speed up mining</button>
+  </div>
+
+  <div class="page" id="q2" style="background: linear-gradient(to right, #4facfe, #00f2fe);">
+    <h2>Question 2</h2>
+    <p>Which Zama technology allows confidential smart contracts?</p>
+    <button onclick="checkAnswer(2,true)">FHEVM</button>
+    <button onclick="checkAnswer(2,false)">Concrete ML</button>
+    <button onclick="checkAnswer(2,false)">Solidity</button>
+    <button onclick="checkAnswer(2,false)">Web3.js</button>
+  </div>
+
+  <div class="page" id="q3" style="background: linear-gradient(to right, #ff9a9e, #fad0c4);">
+    <h2>Question 3</h2>
+    <p>What is the main challenge FHE is solving in blockchain?</p>
+    <button onclick="checkAnswer(3,true)">Privacy of on-chain data</button>
+    <button onclick="checkAnswer(3,false)">Faster consensus</button>
+    <button onclick="checkAnswer(3,false)">Lower gas fees</button>
+    <button onclick="checkAnswer(3,false)">New token creation</button>
+  </div>
+
+  <div class="page" id="q4" style="background: linear-gradient(to right, #a1c4fd, #c2e9fb);">
+    <h2>Question 4</h2>
+    <p>Which Zama open-source library is written in Rust?</p>
+    <button onclick="checkAnswer(4,true)">TFHE-rs</button>
+    <button onclick="checkAnswer(4,false)">React.js</button>
+    <button onclick="checkAnswer(4,false)">NumPy</button>
+    <button onclick="checkAnswer(4,false)">Solidity</button>
+  </div>
+
+  <div class="page" id="q5" style="background: linear-gradient(to right, #fbc2eb, #a6c1ee);">
+    <h2>Question 5</h2>
+    <p>What does the “Confidential Blockchain” enable?</p>
+    <button onclick="checkAnswer(5,true)">Privacy-preserving transactions</button>
+    <button onclick="checkAnswer(5,false)">Free tokens</button>
+    <button onclick="checkAnswer(5,false)">Centralized servers</button>
+    <button onclick="checkAnswer(5,false)">Visible user identities</button>
+  </div>
+
+  <div class="page" id="q6" style="background: linear-gradient(to right, #ffecd2, #fcb69f);">
+    <h2>Question 6</h2>
+    <p>Which project by Zama focuses on AI and FHE integration?</p>
+    <button onclick="checkAnswer(6,true)">Concrete ML</button>
+    <button onclick="checkAnswer(6,false)">ZamaPlay</button>
+    <button onclick="checkAnswer(6,false)">TorchScript</button>
+    <button onclick="checkAnswer(6,false)">AIKit</button>
+  </div>
+
+  <div class="page" id="q7" style="background: linear-gradient(to right, #89f7fe, #66a6ff);">
+    <h2>Question 7</h2>
+    <p>Why is open-source development important to Zama?</p>
+    <button onclick="checkAnswer(7,true)">To let everyone contribute to privacy tech</button>
+    <button onclick="checkAnswer(7,false)">To hide algorithms</button>
+    <button onclick="checkAnswer(7,false)">To restrict community usage</button>
+    <button onclick="checkAnswer(7,false)">To sell licenses</button>
+  </div>
+
+  <div class="page" id="q8" style="background: linear-gradient(to right, #84fab0, #8fd3f4);">
+    <h2>Question 8</h2>
+    <p>What kind of rewards does Zama’s Creator Program offer?</p>
+    <button onclick="checkAnswer(8,true)">USDC / $ZAMA + NFT rewards</button>
+    <button onclick="checkAnswer(8,false)">Free mining rigs</button>
+    <button onclick="checkAnswer(8,false)">Event tickets only</button>
+    <button onclick="checkAnswer(8,false)">Gas fee rebates</button>
+  </div>
+
+  <div class="page" id="q9" style="background: linear-gradient(to right, #ff758c, #ff7eb3);">
+    <h2>Question 9</h2>
+    <p>What’s the ultimate vision of Zama’s confidential blockchain?</p>
+    <button onclick="checkAnswer(9,true)">A world where apps compute on encrypted data safely</button>
+    <button onclick="checkAnswer(9,false)">A gaming platform</button>
+    <button onclick="checkAnswer(9,false)">A public token chain</button>
+    <button onclick="checkAnswer(9,false)">A private chat app</button>
+  </div>
+
+  <div class="page" id="q10" style="background: linear-gradient(to right, #b2fefa, #0ed2f7);">
+    <h2>Question 10</h2>
+    <p>What is the biggest bottleneck for FHE adoption today?</p>
+    <button onclick="checkAnswer(10,true)">Computation performance</button>
+    <button onclick="checkAnswer(10,false)">Lack of encryption</button>
+    <button onclick="checkAnswer(10,false)">Too many users</button>
+    <button onclick="checkAnswer(10,false)">Token volatility</button>
+  </div>
+
+  <!-- Result Page -->
+  <div class="page" id="result" style="background: linear-gradient(to right, #00c6ff, #0072ff);">
+    <h1>Your Quiz Result 🎯</h1>
+    <p id="score"></p>
+    <button id="tweet">Share on Twitter 🐦</button>
+    <button onclick="restartQuiz()">Play Again 🔁</button>
+  </div>
+
+  <script>
+    let score = 0;
+
+    function startQuiz() {
+      showPage("q1");
+    }
+
+    function showPage(id) {
+      document.querySelectorAll('.page').forEach(p => p.style.display = "none");
+      document.getElementById(id).style.display = "block";
+    }
+
+    function checkAnswer(q, correct) {
+      if (correct) {
+        alert("✅ Correct!");
+        score++;
+      } else {
+        alert("❌ Wrong!");
+      }
+
+      if (q < 10) {
+        showPage("q" + (q + 1));
+      } else {
+        document.getElementById("score").innerText = `You scored ${score}/10 🎉`;
+        showPage("result");
+      }
+    }
+
+    function restartQuiz() {
+      score = 0;
+      showPage("intro");
+    }
+
+    document.getElementById("tweet").addEventListener("click", () => {
+      const url = encodeURIComponent(window.location.href);
+      const text = encodeURIComponent(`I just played Zama Quiz 54–63 and scored ${score}/10! Can you beat me? #ZamaFHE #AIprivacy`);
+      window.open(`https://twitter.com/intent/tweet?text=${text}&url=${url}`, "_blank");
+    });
+  </script>
+
+</body>
+</html>
